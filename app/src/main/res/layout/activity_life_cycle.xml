@@ -28,5 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/life_et_txt"
+        android:maxLines="2"
         />
 </LinearLayout>
