@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -11,14 +12,23 @@ import android.widget.TextView;
 
 public class NormalActivity extends AppCompatActivity {
 
+    private static final String TAG = "NormalActivity";
+    
     Button button1 = null;
     ProgressBar progressBar1 = null;
     Button button2 = null;
+    private int progress = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "onCreate: ");
         setContentView(R.layout.normal_layout);
+
+        if (savedInstanceState != null) {
+            progress = savedInstanceState.getInt("prog_bar1");
+            Log.e(TAG, "onCreate progress: ");
+        }
 
         Intent intent = getIntent();
         String data1 = intent.getStringExtra("param1");
@@ -26,6 +36,7 @@ public class NormalActivity extends AppCompatActivity {
         String data3 = intent.getStringExtra("param3");
         showText(data1, data2, data3);
 
+        Log.e(TAG, "onCreate: " + progress);
         button1 = (Button) findViewById(R.id.normal_bt1);
         progressBar1 = (ProgressBar) findViewById(R.id.normal_bar);
         showProgressbar();
@@ -34,8 +45,34 @@ public class NormalActivity extends AppCompatActivity {
         downLoad();
     }
 
-/*显示progressbar是否*/
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e(TAG, "onStart: ");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(TAG, "onPause: ");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e(TAG, "onStop: ");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("prog_bar1", progress);
+        Log.e(TAG, "onSaveInstanceState: ");
+    }
+
+    /*显示progressbar是否*/
     protected void showProgressbar() {
+        progressBar1.setProgress(progress);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +80,7 @@ public class NormalActivity extends AppCompatActivity {
                     progressBar1.setVisibility(View.VISIBLE);
                 } else {
                     progressBar1.setVisibility(View.INVISIBLE);
+
                 }
             }
         });
@@ -52,7 +90,7 @@ public class NormalActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int progress = progressBar1.getProgress();
+                progress = progressBar1.getProgress();
                 progress += 10;
                 progressBar1.setProgress(progress);
             }
