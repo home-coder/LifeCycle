@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LifeCycleActivity extends AppCompatActivity {
 
     private static final String TAG = "LifeCycleActivity";
     private Button diagButton = null;
     private Button normalButton = null;
+    private EditText editText = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,7 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         diagButton = (Button) findViewById(R.id.dialog_bt);
         normalButton = (Button) findViewById(R.id.normal_bt);
-
+        editText = (EditText) findViewById(R.id.life_et);
         setButtonEvent();
     }
 
@@ -72,7 +74,8 @@ public class LifeCycleActivity extends AppCompatActivity {
         normalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NormalActivity.actionStart(LifeCycleActivity.this, "data1", "data2");
+                String strdata3 = editText.getText().toString();
+                NormalActivity.actionStart(LifeCycleActivity.this, "data1", "data2", strdata3);
             }
         });
     }

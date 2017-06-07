@@ -16,19 +16,22 @@ public class NormalActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String data1 = intent.getStringExtra("param1");
         String data2 = intent.getStringExtra("param2");
-
-        showText(data1, data2);
+        String data3 = intent.getStringExtra("param3");
+        showText(data1, data2, data3);
     }
 
-    protected void showText(String data1, String data2) {
+    protected void showText(String data1, String data2, String data3) {
         TextView textView = (TextView) findViewById(R.id.normal_tv);
-        textView.setText(data1 + data2);
+        textView.setText(data1 + data2 + "\n" + data3);
     }
 
-    public static void actionStart(Context context, String data1, String data2) {
+    public static void actionStart(Context context, String data1, String data2, String data3) {
         Intent intent = new Intent(context, NormalActivity.class);
         intent.putExtra("param1", data1);
         intent.putExtra("param2", data2);
+
+        /*从EditText中获取， 并显示到NormalActivity的界面中*/
+        intent.putExtra("param3", data3);
         context.startActivity(intent);
     }
 }
