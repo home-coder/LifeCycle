@@ -6,4 +6,5 @@
     <string name="diatv">Show Diag</string>
     <string name="normal_bt1_txt">ProgressBar Click</string>
     <string name="normal_bar2_txt">Download</string>
+    <string name="normal_et1_txt">Please input hello</string>
 </resources>
