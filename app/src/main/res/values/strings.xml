@@ -3,4 +3,7 @@
     <string name="dialog_txt">Diag Click</string>
     <string name="normal_txt">Normal Click</string>
     <string name="life_et_txt">Please input a Name</string>
+    <string name="diatv">Show Diag</string>
+    <string name="normal_bt1_txt">ProgressBar Click</string>
+    <string name="normal_bar2_txt">Download</string>
 </resources>
