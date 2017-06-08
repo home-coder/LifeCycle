@@ -21,7 +21,9 @@
         <activity android:name=".NormalActivity" />
         <activity android:name=".TestLinearLayout" />
         <activity android:name=".TestRelativeLayout" />
-        <activity android:name=".TestFrameLayout"></activity>
+        <activity android:name=".TestFrameLayout" />
+        <activity android:name=".PercentFrameLayout" />
+        <activity android:name=".CustomUI"></activity>
     </application>
 
 </manifest>

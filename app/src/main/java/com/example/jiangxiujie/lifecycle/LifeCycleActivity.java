@@ -1,6 +1,7 @@
 package com.example.jiangxiujie.lifecycle;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,9 @@ public class LifeCycleActivity extends AppCompatActivity {
     private Button normalButton = null;
     private Button testButton = null;
     private EditText editText = null;
+    private Button relativeButton = null;
+    private Button percentButton = null;
+    private Button custButton = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +26,14 @@ public class LifeCycleActivity extends AppCompatActivity {
         Log.e(TAG, "onCreate: ");
         setContentView(R.layout.activity_life_cycle);
 
+
+
         diagButton = (Button) findViewById(R.id.dialog_bt);
         normalButton = (Button) findViewById(R.id.normal_bt);
         testButton = (Button) findViewById(R.id.test_bt);
+        relativeButton = (Button) findViewById(R.id.relative_bt);
+        percentButton = (Button) findViewById(R.id.percent_bt);
+        custButton = (Button) findViewById(R.id.cust_bt);
         editText = (EditText) findViewById(R.id.life_et);
         setButtonEvent();
     }
@@ -87,5 +96,27 @@ public class LifeCycleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        relativeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LifeCycleActivity.this, TestRelativeLayout.class);
+                startActivity(intent);
+            }
+        });
+        percentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LifeCycleActivity.this, PercentFrameLayout.class);
+                startActivity(intent);
+            }
+        });
+        custButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LifeCycleActivity.this, CustomUI.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

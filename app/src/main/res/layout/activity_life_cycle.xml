@@ -26,8 +26,26 @@
         android:id="@+id/test_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Click" />
+        android:text="Linear Test" />
+    <Button
+        android:id="@+id/relative_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Test"
+        />
 
+    <Button
+        android:id="@+id/percent_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PercentFrame Test"
+        />
+    <Button
+        android:id="@+id/cust_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom UI"
+        />
     <EditText
         android:id="@+id/life_et"
         android:layout_width="match_parent"
