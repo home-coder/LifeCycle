@@ -7,4 +7,7 @@
     <string name="normal_bt1_txt">ProgressBar Click</string>
     <string name="normal_bar2_txt">Download</string>
     <string name="normal_et1_txt">Please input hello</string>
+    <string name="test_txt1">Button1</string>
+    <string name="test_txt2">Button2</string>
+    <string name="test_txt3">Button3</string>
 </resources>

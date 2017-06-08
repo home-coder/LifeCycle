@@ -14,29 +14,31 @@
         android:id="@+id/dialog_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dialog_txt"
-        />
+        android:text="@string/dialog_txt" />
 
     <Button
         android:id="@+id/normal_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/normal_txt"
-        />
+        android:text="@string/normal_txt" />
+
+    <Button
+        android:id="@+id/test_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Click" />
 
     <EditText
         android:id="@+id/life_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/life_et_txt"
-        android:maxLines="2"
-        />
+        android:maxLines="2" />
 
     <ImageView
         android:id="@+id/life_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/img_1"
-        />
+        android:src="@drawable/img_1" />
 
 </LinearLayout>

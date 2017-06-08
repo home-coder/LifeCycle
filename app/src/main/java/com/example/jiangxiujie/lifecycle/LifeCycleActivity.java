@@ -13,6 +13,7 @@ public class LifeCycleActivity extends AppCompatActivity {
     private static final String TAG = "LifeCycleActivity";
     private Button diagButton = null;
     private Button normalButton = null;
+    private Button testButton = null;
     private EditText editText = null;
 
     @Override
@@ -23,6 +24,7 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         diagButton = (Button) findViewById(R.id.dialog_bt);
         normalButton = (Button) findViewById(R.id.normal_bt);
+        testButton = (Button) findViewById(R.id.test_bt);
         editText = (EditText) findViewById(R.id.life_et);
         setButtonEvent();
     }
@@ -76,6 +78,13 @@ public class LifeCycleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String strdata3 = editText.getText().toString();
                 NormalActivity.actionStart(LifeCycleActivity.this, "data1", "data2", strdata3);
+            }
+        });
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LifeCycleActivity.this, TestLinearLayout.class);
+                startActivity(intent);
             }
         });
     }

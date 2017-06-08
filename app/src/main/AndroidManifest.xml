@@ -17,8 +17,9 @@
         </activity>
         <activity
             android:name=".DiagActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
-        <activity android:name=".NormalActivity"></activity>
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".NormalActivity" />
+        <activity android:name=".TestLinearLayout"></activity>
     </application>
 
 </manifest>
