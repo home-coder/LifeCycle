@@ -10,4 +10,6 @@
     <string name="test_txt1">Button1</string>
     <string name="test_txt2">Button2</string>
     <string name="test_txt3">Button3</string>
+    <string name="test_txt4">Button4</string>
+    <string name="test_input">Please input </string>
 </resources>

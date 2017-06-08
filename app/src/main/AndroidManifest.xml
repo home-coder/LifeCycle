@@ -19,7 +19,9 @@
             android:name=".DiagActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".NormalActivity" />
-        <activity android:name=".TestLinearLayout"></activity>
+        <activity android:name=".TestLinearLayout" />
+        <activity android:name=".TestRelativeLayout" />
+        <activity android:name=".TestFrameLayout"></activity>
     </application>
 
 </manifest>
