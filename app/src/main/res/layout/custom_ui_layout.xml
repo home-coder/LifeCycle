@@ -23,7 +23,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="Title Text"
-        android:textColor="#000"
+        android:textColor="#e6df1c"
         android:textSize="24sp" />
 
     <Button

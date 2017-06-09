@@ -26,7 +26,8 @@
         <activity android:name=".TestFrameLayout" />
         <activity android:name=".PercentFrameLayout" />
         <activity android:name=".CustomUI" />
-        <activity android:name=".AppExample"></activity>
+        <activity android:name=".AppExample" />
+        <activity android:name=".AlsoAppExample"></activity>
     </application>
 
 </manifest>
