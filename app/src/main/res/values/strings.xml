@@ -13,4 +13,6 @@
     <string name="test_txt4">Button4</string>
     <string name="test_input">Please input </string>
 
+    <color name="clr_normal">#FFFFFF</color>
+    <color name="clr_pressed">#99E5FE</color>
 </resources>

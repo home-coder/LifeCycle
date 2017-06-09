@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
+    android:background="#2ab076"
     tools:context="com.example.jiangxiujie.lifecycle.CustomUI">
 
     <Button
         android:id="@+id/cust_bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_margin="5dp"
+        android:background="@drawable/button"
         android:text="BACK" />
 
     <TextView
@@ -26,11 +27,10 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/cust_tv2"
+        android:id="@+id/cust_bt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="Edit"
-        />
+        android:background="@drawable/button"
+        android:text="Edit" />
 </LinearLayout>

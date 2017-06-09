@@ -8,13 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jiangxiujie.lifecycle.TestLinearLayout">
+    tools:context="com.example.jiangxiujie.lifecycle.TestLinearLayout"
+    android:baselineAligned="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/test_bt1"
@@ -28,20 +29,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/test_input"
-            android:maxLines="2"/>
+            android:maxLines="2" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:layout_weight="3"
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/test_txt4"/>
+            android:text="@string/test_txt4" />
 
         <Button
             android:id="@+id/test_bt2"

@@ -26,7 +26,10 @@ public class LifeCycleActivity extends AppCompatActivity {
         Log.e(TAG, "onCreate: ");
         setContentView(R.layout.activity_life_cycle);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
 
         diagButton = (Button) findViewById(R.id.dialog_bt);
         normalButton = (Button) findViewById(R.id.normal_bt);
