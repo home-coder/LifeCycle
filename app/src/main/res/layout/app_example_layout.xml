@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/campuscard"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/text_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="我的山科"
+            android:textColor="#a9b7b7"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoinquiry"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/infoinquiryimg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/text_infoquery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="信息查询"
+            android:textColor="#a9b7b7"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/campusnews"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/newsimg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/new_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="校园资讯"
+            android:textColor="#a9b7b7"
+            android:textSize="10dp" />
+    </RelativeLayout>
+</LinearLayout>
