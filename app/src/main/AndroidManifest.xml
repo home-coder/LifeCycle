@@ -10,13 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".LifeCycleActivity"
-            android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".DiagActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
@@ -27,7 +21,19 @@
         <activity android:name=".PercentFrameLayout" />
         <activity android:name=".CustomUI" />
         <activity android:name=".AppExample" />
-        <activity android:name=".AlsoAppExample"></activity>
+        <activity android:name=".AlsoAppExample" />
+        <activity android:name=".TableLayout" />
+        <activity android:name=".ListViewTest">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TwoListView">
+
+        </activity>
+        <activity android:name=".ListViewTest2"></activity>
     </application>
 
 </manifest>
