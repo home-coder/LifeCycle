@@ -2,12 +2,16 @@ package com.example.jiangxiujie.lifecycle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
 public class ListViewTest extends AppCompatActivity {
+    private static final String TAG = "ListViewTest";
 
     private String[] data = {
       "apple", "banana", "orange", "watermelon", "pear",
@@ -16,8 +20,10 @@ public class ListViewTest extends AppCompatActivity {
       "melon", "yangzhnening"
     };
 
+    int position;
     Button buttonUp, buttonDown, buttonOK;
     ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +38,7 @@ public class ListViewTest extends AppCompatActivity {
         buttonUp = (Button) findViewById(R.id.button_up);
         buttonOK = (Button) findViewById(R.id.button_ok);
         buttonDown = (Button) findViewById(R.id.button_down);
-
+        position = listView.getFirstVisiblePosition();
         setButtonClick();
     }
 
@@ -42,11 +48,17 @@ public class ListViewTest extends AppCompatActivity {
             public void onClick(View v) {
                 switch (button.getId()) {
                     case R.id.button_up:
-                        listView
+                        Log.e(TAG, "onClick: up" );
+                        position--;
                         break;
                     case R.id.button_ok:
+       /*                 AdapterView adpterview = listView.getItemAtPosition(position);*/
+                        String s = listView.getItemAtPosition(position).toString();
+                        Log.e(TAG, "onClick: ---" + s);
                         break;
                     case R.id.button_down:
+                        Log.e(TAG, "onClick: down" );
+                        position++;
                         break;
                     default:
                         break;

@@ -10,9 +10,8 @@
         android:id="@+id/list_view"
         android:layout_width="120dp"
         android:layout_height="match_parent"
-        android:background="#00aa00"
         android:cacheColorHint="@android:color/transparent"
-        android:listSelector="@android:color/transparent"
+
         android:scrollbars="none"
         >
 
