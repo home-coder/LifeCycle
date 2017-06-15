@@ -45,7 +45,7 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Log.e(TAG, "getView: ----->");
-
+/*828平台   frameworks/base/core/java/com/android/internal/app/ShutdownModeDialog.java*/
         //加载布局为一个视图
         View view = inflater.inflate(R.layout.twotext_listview, null);
         Student student = getItem(position);
