@@ -4,8 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
+
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -20,16 +19,17 @@ public class ListViewTest extends AppCompatActivity {
       "melon", "yangzhnening"
     };
 
-    int position;
-    Button buttonUp, buttonDown, buttonOK;
-    ListView listView;
+    private int position;
+    private Button buttonUp, buttonDown, buttonOK;
+    private ListView listView;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_test);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        adapter = new ArrayAdapter<String>(
                 ListViewTest.this, android.R.layout.simple_list_item_1, data
         );
         listView = (ListView) findViewById(R.id.list_view);
@@ -54,6 +54,8 @@ public class ListViewTest extends AppCompatActivity {
                     case R.id.button_ok:
        /*                 AdapterView adpterview = listView.getItemAtPosition(position);*/
                         String s = listView.getItemAtPosition(position).toString();
+                        String m = adapter.getItem(position);
+
                         Log.e(TAG, "onClick: ---" + s);
                         break;
                     case R.id.button_down:

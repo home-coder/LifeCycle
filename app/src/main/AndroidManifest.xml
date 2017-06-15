@@ -23,17 +23,21 @@
         <activity android:name=".AppExample" />
         <activity android:name=".AlsoAppExample" />
         <activity android:name=".TableLayout" />
-        <activity android:name=".ListViewTest">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".ListViewTest"></activity>
+        <activity android:name=".TwoListView" />
+        <activity android:name=".ListViewTest2" />
+        <activity android:name=".BaseAdapterActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
-        <activity android:name=".TwoListView">
 
+        <activity android:name=".TwoTextListView">
         </activity>
-        <activity android:name=".ListViewTest2"></activity>
+        <activity android:name=".ObjectListView">
+        </activity>
     </application>
 
 </manifest>
